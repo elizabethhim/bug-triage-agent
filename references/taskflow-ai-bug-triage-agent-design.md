@@ -818,12 +818,11 @@ Your response must be a single word: "high_quality", "acceptable", or "poor"."""
 
 ## 11. Build Order Summary
 
-1. **Set up environment:** Python, Jupyter/Colab, install `anthropic`, `arize-otel`, `openinference-instrumentation-anthropic`
+1. **Set up environment:** Python, Jupyter, install `anthropic`, `arize-otel`, `opentelemetry`, `python-dotenv`
 2. **Copy simulated data** from this doc into the notebook (PRODUCT_DOCS, ERROR_LOGS, PAST_ISSUES, TEST_REGISTRY)
 3. **Implement tool functions** (search_product_docs, pull_error_logs, search_past_issues, check_test_coverage)
-4. **Set up Arize tracing** (register tracer, instrument Anthropic client)
-5. **Build the agent loop** (system prompt + tools + while loop)
+4. **Set up Arize tracing** (register tracer provider, create manual AGENT/LLM/TOOL spans)
+5. **Build the agent loop** (system prompt + tools + while loop with nested spans)
 6. **Run all 8 test reports** through the agent, inspect traces in Arize AX
 7. **Create dataset** in Arize from test reports + ground truth labels
 8. **Run evals** using the three eval templates
-9. **Screenshot everything** for the slide deck
