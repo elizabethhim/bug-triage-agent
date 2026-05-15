@@ -147,20 +147,3 @@ Their customer support agent example uses:
 Mirror this structure but adapt for Anthropic's tool use API format and our bug triage use case.
 
 ---
-
-## Deliverable Format
-
-- **Part 1:** Jupyter notebook (or link to hosted version) with the agent code
-- **Part 2:** 1-2 slides with screenshots and observations on product experience (dev workflow + observability workflow)
-- **Part 3:** Product proposal — slide deck (5-8 slides) with problem, "why now," MVP scope, low-fi mocks, architecture diagram, success metrics
-- Optional: working prototype of the proposed feature
-
----
-
-## Notes for the Presentation
-
-- The agent concept is already creative and differentiated — don't overthink it
-- Spend zero time in the presentation explaining the fictional product (TaskFlow AI) — it's self-explanatory
-- Spend maximum time on: trace walkthrough, agent reasoning, eval results, and the product proposal
-- The product proposal should be informed by real friction encountered during Parts 1 and 2
-- Elizabeth's differentiator: most PM candidates submit a doc. She submits a doc AND a functional prototype.
