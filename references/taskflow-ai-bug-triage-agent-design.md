@@ -2,9 +2,9 @@
 
 ## Overview
 
-This document defines the complete simulated environment for a **Bug Triage Agent** built as an Arize AX take-home assignment. The agent monitors a bug report channel, investigates each report using available tools, classifies it, and outputs a structured investigation summary.
+This document defines the complete simulated environment for a **Bug Triage Agent**. The agent monitors a bug report channel, investigates each report using available tools, classifies it, and outputs a structured investigation summary.
 
-The fictional product is **TaskFlow AI** — a B2B project management SaaS with recently launched AI features.
+The fictional product is **TaskFlow AI** — a project management software company with recently launched AI features.
 
 ---
 

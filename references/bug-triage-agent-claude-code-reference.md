@@ -1,26 +1,14 @@
 # Bug Triage Agent — Claude Code Reference
 
-## Context
-
-Elizabeth is building this for an Arize AX take-home assignment. Arize is an AI observability/evaluation platform. The assignment has 3 parts:
-
-1. **Build an agent** and instrument it with Arize AX tracing
-2. **Try both workflows** — development (dataset + evals) and observability (tracing). Share feedback on product experience.
-3. **Product proposal** — what features should Arize build to increase AX adoption for developers building agent applications? Include MVP scope, mocks, and how you'd present to an engineering team.
-
-**Submission to:** mmende@arize.com, aparna@arize.com, aman@arize.com, sdelucia@arize.com
-**Deadline:** May 15/16, 2026
-
----
 
 ## What We're Building
 
-A **Bug Triage Agent** that takes bug reports (simulating a Slack #bugs channel), investigates them using tools, and classifies them. The fictional product being triaged is **TaskFlow AI** — a project management SaaS with AI features.
+A **Bug Triage Agent** that takes bug reports (simulating a Slack #bugs channel), investigates them using tools, and classifies them. The fictional product being triaged is **TaskFlow AI**, a project management software company with AI features.
 
 ### Why This Concept
-- Multi-step agent with tool calls, routing, and classification → produces rich, interesting traces in Arize
-- Failure cases are debuggable (misclassification, wrong tool choice, stale cache reasoning) → compelling for observability demo
-- AI features in the fictional product create AI-debugging-AI scenarios → relevant to Arize's users
+- Multi-step agent with tool calls, routing, and classification
+- Failure cases are debuggable (misclassification, wrong tool choice, stale cache reasoning)
+- AI features in the fictional product create AI-debugging-AI scenarios
 - Authentic to Elizabeth's PM experience (she's seen these Slack channels at Highwire and Stell)
 
 ---
@@ -34,10 +22,7 @@ Raw agent loop (no framework). Reasons:
 - Frameworks (LangGraph, CrewAI) add abstractions that obscure what's happening — opposite of what you want when demoing an observability tool
 
 ### LLM Provider
-**Anthropic (Claude)** — not OpenAI like the Arize cookbook examples. Reasons:
-- Authentic to how Elizabeth works (built Elizabot with Anthropic API)
-- Differentiates from other candidates who'll copy the cookbook pattern
-- Arize supports Anthropic via `openinference-instrumentation-anthropic`
+**Anthropic (Claude)**
 
 ### Agent Loop Structure
 ```
@@ -162,20 +147,3 @@ Their customer support agent example uses:
 Mirror this structure but adapt for Anthropic's tool use API format and our bug triage use case.
 
 ---
-
-## Deliverable Format
-
-- **Part 1:** Jupyter notebook (or link to hosted version) with the agent code
-- **Part 2:** 1-2 slides with screenshots and observations on product experience (dev workflow + observability workflow)
-- **Part 3:** Product proposal — slide deck (5-8 slides) with problem, "why now," MVP scope, low-fi mocks, architecture diagram, success metrics
-- Optional: working prototype of the proposed feature
-
----
-
-## Notes for the Presentation
-
-- The agent concept is already creative and differentiated — don't overthink it
-- Spend zero time in the presentation explaining the fictional product (TaskFlow AI) — it's self-explanatory
-- Spend maximum time on: trace walkthrough, agent reasoning, eval results, and the product proposal
-- The product proposal should be informed by real friction encountered during Parts 1 and 2
-- Elizabeth's differentiator: most PM candidates submit a doc. She submits a doc AND a functional prototype.
